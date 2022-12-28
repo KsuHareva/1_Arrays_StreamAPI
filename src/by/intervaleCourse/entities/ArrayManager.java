@@ -35,26 +35,6 @@ public class ArrayManager {
         return arrayResult;
     }
 
-
-    public static int[] getArrayResultParallelStream(int[] array) {
-        long start1 = System.currentTimeMillis();
-        int countPositive = 0;
-        int[] arrayResult = null;
-
-        if (array != null && array.length > 0) {
-            arrayResult = new int[2];
-            arrayResult[0] = (int) Arrays.stream(array).filter(a -> a > 0).count();
-            arrayResult[1] = Arrays.stream(array).parallel().filter(a -> a < 0).sum();
-        } else {
-            arrayResult = new int[0];
-        }
-        long end1 = System.currentTimeMillis();
-        streamTime = end1 - start1;
-        System.out.println(streamTime);
-        return arrayResult;
-    }
-
-
     public static int[] getArrayResultStreamCollection(int[] array) {
         long start1 = System.currentTimeMillis();
         int[] arrayResult = null;

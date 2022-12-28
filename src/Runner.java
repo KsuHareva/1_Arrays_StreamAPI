@@ -15,10 +15,7 @@ public class Runner {
         System.out.println("Time cycle");
         int[] arrayResult = ArrayManager.getArrayResult(array);
 
-        System.out.println("Time Stream");
-        int[] arrayResult1 = ArrayManager.getArrayResultParallelStream(array);
-
-        System.out.println("Time StreamInteger");
+        System.out.println("Time StreamCollection");
         int[] arrayResult2 = ArrayManager.getArrayResultStreamCollection(array);
 
         System.out.println("_____");
